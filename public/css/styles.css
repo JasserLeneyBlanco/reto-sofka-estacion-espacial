@@ -1,0 +1,95 @@
+header{
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+hr {
+  margin: 3rem auto;
+  width: 95%;
+}
+
+.bg-blue {
+  background-color: #0099ff;
+}
+
+
+.container-fluid {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between !important;
+}
+
+.img-content {
+  width: 5rem;
+  max-width: 10%;
+  height: auto;
+  margin: 0.5rem;
+}
+.agregar-nave {
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+.form-control,
+.custom-select {
+  margin: 0.5rem auto;
+  width: 50%;
+}
+
+.custom-select {
+  padding: 0.4rem;
+}
+
+.button {
+  width: 24%;
+  max-width: 8rem;
+  margin: 0.5rem;
+}
+
+.btn-eliminar {
+  width: auto;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+.table {
+  width: 50%;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+
+.hidden{
+  position: absolute;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.container-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+}
+
+.container-buttons> button{
+  padding: 1rem;
+  text-align: center;
+}
+
+.filter {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
+

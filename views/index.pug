@@ -1,0 +1,100 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet")
+    link(rel="stylesheet", href="/css/styles.css") 
+    title #{nombrePagina}
+  
+  body   
+     
+    header.navbar.sticky-top.bg-blue
+      nav.container-fluid
+        .img-content
+           img(src="/assets/img/Astronaut.svg", alt="Astronaut")
+        .text-content
+           h1.text-white #{nombrePagina}
+
+    main
+
+       h2.title-nave Escoge Una Nave A Crear
+       .container-buttons
+          button.btn.btn-primary.bg-blue.button.lanzadera(data-tipo="Vehiculo Lanzadora🚀🚀🚀") Nave Lanzadora🚀
+          button.btn.btn-primary.bg-blue.button.no-tripulada(data-tipo="No Tripulada❌👩‍🚀🛸") Nave No Tripulada❌👨‍🚀
+          button.btn.btn-primary.bg-blue.button.tripulada(data-tipo="Tripulada👩‍🚀🚀👨‍🚀") Nave Tripulada👨‍🚀🛸👩‍🚀      
+       
+       form.agregar-nave.hidden(action="/" method="POST")
+        .form-group        
+          input.form-control(type='text', placeholder='Nombre' name="nombre" id="nombre" required)    
+          input.form-control(type='text', placeholder='Pais' name="pais" id="pais" required)    
+          input.form-control(type='text', placeholder='Combustible' name="combustible" id="combustible" required)              
+          input.form-control(type='hidden', placeholder='Tipo de Nave' name="tipo" id="tipo" required) 
+        
+        button.btn.btn-primary.bg-blue.button(type='submit') Enviar
+        button.btn.btn-primary.bg-blue.button(type='reset') Reset
+
+        if errores 
+          each error in errores 
+            .texto= error.err
+            
+          
+
+
+         
+       hr       
+       h2 Naves En La Base De Datos
+
+        input.form-control.mr-sm-1#search(type='text' placeholder='Busca Tu Nave..🚀🛸👩‍🚀')   
+
+       table.table
+        thead.bg-blue.text-white
+          tr
+            th Id
+            th Nombre
+            th Pais
+            th Combustible
+            th Tipo 
+            th Eliminar 
+        tbody      
+         each nave in naves 
+          tr
+            th= nave.id
+            td= nave.nombre
+            td= nave.pais
+            td= nave.combustible
+            td= nave.tipo    
+            td             
+              button(data-id=nave.id).btn.btn-danger.btn-eliminar X
+
+       #nave-list
+
+       template#template-content
+        figure
+          img()
+          figcaption 
+          
+       
+
+  
+
+    script(src="/dist/app_compiler.js")
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+  
