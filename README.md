@@ -1,4 +1,4 @@
-# Recto Técnico: eto Sofka Estacion Espacial
+# Recto Técnico: Reto Sofka Estacion Espacial
 Desarrollaremos un proyecto aplicando POO Con Javascript  se debe leer la información:  https://moaramore.com/2016/05/14/clasificacion-de-las-naves-espaciales
 
 
